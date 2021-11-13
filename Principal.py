@@ -4,5 +4,20 @@ En este momento el gerente estÃ¡ entrevistando a una persona para su contrataciÃ
 """
 
 class Persona:
-    def __init__(self, altura):
+    def __init__(self, nombre, altura, edad):
         self.__altura = altura
+        self.__nombre = nombre
+        self.__edad = edad
+
+    def getNombre(self):
+        return self.__nombre
+    def hetEdad(self):
+        return self.__edad
+    def getaltura(self):
+        return self.__altura
+
+    def setEdad(self, nuevaEdad):
+        self.__edad=nuevaEdad
+    def setNaltura(self, nuevaLtura):
+        self.__edad=nuevaLtura
+

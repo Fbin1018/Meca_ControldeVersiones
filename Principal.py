@@ -26,7 +26,7 @@ class Persona:
 
 
 class Empleado(Persona):
-    def __init__(self, nombre, altura, edad, nivel):
+    def __init__(self, nombre, altura, edad, nivel,sueldo):
         Persona.__init__(self, nombre, altura, edad)
         self.__nivel = nivel
 
@@ -39,8 +39,8 @@ class Empleado(Persona):
 
 class Gerente(Empleado):
     opcion = 0
-    def __init__(self, nombre, altura, edad, nivel, depto):
-        Empleado.__init__(self, nombre, altura, edad, nivel)
+    def __init__(self, nombre, altura, edad, nivel, sueldo, depto):
+        Empleado.__init__(self, nombre, altura, edad, nivel, sueldo)
         self.__depto = depto
         self.__nombre = nombre
 
@@ -49,7 +49,8 @@ class Gerente(Empleado):
               "\nEn este momento el gerente está entrevistando a una persona para su contratación.")
 
     def Vestimenta(self):
-        print("El gerente", self.__nombre, " tiene puesto un saco con tres botones.")
+        print("El gerente", self.__nombre, " tiene puesto un saco azul con tres botones"
+                                           "ademas usa una corbata roja")
 
     def Presentacion(self):
         print("Hola buenas tardes, mi nombre es ",self.__nombre,", soy gerente del departamento de ", self.__depto,""
@@ -60,42 +61,68 @@ class Gerente(Empleado):
 
     def Entrevista(self):
         print(type(self).__name__,": Le parece si empiezo con una preguntas")
-        pregunta1 = "¿Cual es tu nivel de estudios?\n"
-        pregunta2 = "¿Cual fue tu ultimo empleo?\n"
-        pregunta3 = "¿Has trabajado en el area de Finanzas?\n"
-        pregunta4 = "¿Qué Son las Finanzas Corporativas?\n"
-        pregunta5 = "¿Que le puedes aportar a esta empresa?\n"
+        pregunta1 = "¿Su nivel de estudios es superior a Bachiller?\n"
+        pregunta2 = "¿Cuenta con titulo Universitario?\n"
+        pregunta3 = "¿Cual fue tu ultimo empleo?\n"
+        pregunta4 = "¿Has trabajado en el area de Finanzas?\n"
+        pregunta5 = "¿Qué Son las Finanzas Corporativas?\n"
+        pregunta6 = "¿Que le puedes aportar a esta empresa?\n"
 
-        respuesta3 = "si"
-        respuesta4 = "un campo de estudio"
+        respuesta1 = "si"
+        respuesta2 = "si"
+        respuesta4 = "si"
+        respuesta5 = "un campo de estudio"
 
         entrada1 = input(f"pregunta 1 :{pregunta1}")
         entrada2 = input(f"pregunta 2 :{pregunta2}")
         entrada3 = input(f"pregunta 3 :{pregunta3}")
         entrada4 = input(f"pregunta 4 :{pregunta4}")
         entrada5 = input(f"pregunta 5 :{pregunta5}")
+        entrada6 = input(f"pregunta 6 :{pregunta6}")
 
-        acierto3 = False
+        acierto1 = False
+        acierto2 = False
         acierto4 = False
+        acierto5 = False
 
         #////////////////////////////////
-        if(entrada3 == respuesta3):
-            acierto3 = True
+        if(entrada1 == respuesta1):
+            acierto1 = True
         else:
-            acierto3 = False
+            acierto1 = False
+
+        if (entrada2 == respuesta2):
+            acierto2 = True
+        else:
+            acierto2 = False
 
         if (entrada4 == respuesta4):
             acierto4 = True
         else:
             acierto4 = False
 
+        if (entrada5 == respuesta5):
+            acierto5 = True
+        else:
+            acierto5 = False
+
         #/////////////////////////////
-        if (acierto3 == True):
+        if (acierto1 == True):
+            print("1 punto")
+        else:
+            print("0 puntos")
+
+        if (acierto2 == True):
             print("1 punto")
         else:
             print("0 puntos")
 
         if (acierto4 == True):
+            print("1 punto")
+        else:
+            print("0 puntos")
+
+        if (acierto5 == True):
             print("1 punto")
         else:
             print("0 puntos")

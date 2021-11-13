@@ -45,7 +45,6 @@ class Empleado(Persona):
 
 
 class Gerente(Empleado):
-    opcion = 0
     def __init__(self, nombre, altura, edad, nivel, sueldo, depto):
         Empleado.__init__(self, nombre, altura, edad, nivel, sueldo)
         self.__depto = depto
@@ -133,3 +132,16 @@ class Gerente(Empleado):
             print("1 punto")
         else:
             print("0 puntos")
+
+        #///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        if (acierto1 == True & acierto2 == True & acierto4 == True & acierto5 == True):
+            print("Felicidades estas contratado, pasa a RH el dia de mañana empiezas")
+
+        elif (acierto1 == True & acierto2 == True & acierto4 == True):
+            print("Felicidades estas contratado, pasa a RH el dia de mañana empiezas")
+
+        elif (acierto1 == True & acierto2 == True):
+            print("Fue una entrevista muy interesante, pero nosotros te llamamos...")
+
+        elif (acierto1 == True):
+            print("Fue una entrevista muy interesante, pero nosotros te llamamos...")

@@ -21,3 +21,16 @@ class Persona:
     def setNaltura(self, nuevaLtura):
         self.__edad=nuevaLtura
 
+
+class Empleado(Persona):
+    def __init__(self, nombre, altura, edad, cargo):
+        super().__init__(nombre, altura, edad)
+        self.__cargo = cargo
+
+    def Cargo(self):
+        return self.__cargo
+
+    def setCargo(self, nuevoCargo):
+        self.__cargo=nuevoCargo
+
+

@@ -33,4 +33,9 @@ class Empleado(Persona):
     def setCargo(self, nuevoCargo):
         self.__cargo=nuevoCargo
 
+class Gerente(Empleado):
+    def __init__(self, nombre, altura, edad, cargo):
+        super().__init__(self, nombre, altura, edad, cargo)
 
+    def Vestimenta(self):
+        print("El gerente tiene puesto un saco con tres botones.")

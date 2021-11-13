@@ -23,19 +23,22 @@ class Persona:
 
 
 class Empleado(Persona):
-    def __init__(self, nombre, altura, edad, cargo):
+    def __init__(self, nombre, altura, edad, nivel):
         super().__init__(nombre, altura, edad)
-        self.__cargo = cargo
+        self.__nivel = nivel
 
-    def Cargo(self):
-        return self.__cargo
+    def Nivel(self):
+        return self.__nivel
 
-    def setCargo(self, nuevoCargo):
-        self.__cargo=nuevoCargo
+    def setCargo(self, nuevoNivel):
+        self.__nivel=nuevoNivel
 
 class Gerente(Empleado):
-    def __init__(self, nombre, altura, edad, cargo):
-        super().__init__(self, nombre, altura, edad, cargo)
+    def __init__(self, nombre, altura, edad, nivel, depto):
+        super().__init__(self, nombre, altura, edad, nivel)
 
     def Vestimenta(self):
         print("El gerente tiene puesto un saco con tres botones.")
+
+    def Departamento(self):
+        print("El gerente es del departamento de: ")

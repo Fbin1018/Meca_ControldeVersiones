@@ -21,6 +21,9 @@ class Persona:
     def setAltura(self, nuevaAltura):
         self.__edad = nuevaAltura
 
+    def Presentacion(self):
+        print("buenas tardes Gerente, mi nombre es ",self.__nombre,"mucho gusto")
+
 
 class Empleado(Persona):
     def __init__(self, nombre, altura, edad, nivel):
@@ -56,22 +59,4 @@ class Gerente(Empleado):
         print("Problema: ",self.__nombre)
 
     def Entrevista(self):
-        opc = int(input("Preguntas \n" 
-                        "1. Numero par o impar \n" 
-                        "2. Factorial \n" 
-                        "3. Numero primo o no \n" 
-                        "4. Raiz cuadrada \n" 
-                        "5. multiplicacion \n" 
-                        "6. Finalizar  \n" 
-                        "Elija una Opcion :) \n"))
-        return opc
-
-        while opcion != 6:
-            opcion = self.Entrevista()
-            if opcion == 1:
-                pass
-            if opcion == 6:
-                print("Programa terminado")
-
-            if opcion > 6:
-                print("opcion invalida")
+        pass

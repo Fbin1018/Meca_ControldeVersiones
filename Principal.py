@@ -22,7 +22,7 @@ class Persona:
         self.__edad = nuevaAltura
 
     def Presentacion(self):
-        print("buenas tardes Gerente, mi nombre es ",self.__nombre,"mucho gusto")
+        print("Buenas tardes Gerente, mi nombre es ",self.__nombre,"mucho gusto")
 
 
 class Empleado(Persona):
@@ -59,4 +59,4 @@ class Gerente(Empleado):
         print("Problema: ",self.__nombre)
 
     def Entrevista(self):
-        pass
+        print(type(self).__name__,": Le parece si empiezo con una preguntas")

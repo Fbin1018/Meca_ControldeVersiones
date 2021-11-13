@@ -5,10 +5,13 @@ El gerente de la empresa es un empleado que mide 1.80 m, se llama <nombre> y tie
 En este momento el gerente está entrevistando a una persona para su contratación.
 """
 
-gerente = main_Principal.Gerente("Gerardo",1.80, 39, 5, "Finanzas")
+gerente = main_Principal.Gerente(input("nombre del Gerente: "),1.80, 39, 5, "Finanzas")
 gerente.Problema()
+print("")
 gerente.Introduccion()
+print("")
 gerente.Presentacion()
-gerente.Entrevista()
 persona = main_Principal.Persona(input("ingrese su nombre: "),1.82, 32)
 persona.Presentacion()
+print("")
+gerente.Entrevista()

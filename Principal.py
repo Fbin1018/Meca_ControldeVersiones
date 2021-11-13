@@ -90,6 +90,7 @@ class Gerente(Empleado):
             acierto4 = False
 
         # /////////////////////////////
+        print("Puntaje: ")
         if (acierto3 == True):
             print("1 punto")
         else:
@@ -99,3 +100,8 @@ class Gerente(Empleado):
             print("1 punto")
         else:
             print("0 puntos")
+
+        if(acierto3 == True & acierto4 == True):
+            print("Felicidades estas contratado, pasa a RH el dia de mañana empiezas")
+        else:
+            print("Fue una entrevista muy interesante, pero nosotros te llamamos...")

@@ -29,6 +29,13 @@ class Empleado(Persona):
     def __init__(self, nombre, altura, edad, nivel,sueldo):
         Persona.__init__(self, nombre, altura, edad)
         self.__nivel = nivel
+        self.__sueldo = sueldo
+
+    def Sueldo(self):
+        print(self.__sueldo)
+
+    def setSueldo(self, nuevoSueldo):
+        self.__sueldo=nuevoSueldo
 
     def Nivel(self):
         print(self.__nivel)

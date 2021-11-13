@@ -6,12 +6,13 @@ En este momento el gerente estÃ¡ entrevistando a una persona para su contrataciÃ
 """
 
 gerente = main_Principal.Gerente(input("nombre del Gerente: "),1.80, 39, 5, "Finanzas")
+persona = main_Principal.Persona(input("ingrese su nombre: "),1.82, 32)
 gerente.Problema()
 print("")
 gerente.Introduccion()
 print("")
 gerente.Presentacion()
-persona = main_Principal.Persona(input("ingrese su nombre: "),1.82, 32)
+print("")
 persona.Presentacion()
 print("")
 gerente.Entrevista()

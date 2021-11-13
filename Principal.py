@@ -26,7 +26,7 @@ class Persona:
 
 
 class Empleado(Persona):
-    def __init__(self, nombre, altura, edad, nivel):
+    def __init__(self, nombre, altura, edad, nivel = None):
         Persona.__init__(self, nombre, altura, edad)
         self.__nivel = nivel
 
@@ -36,9 +36,7 @@ class Empleado(Persona):
     def setNivel(self, nuevoNivel):
         self.__nivel=nuevoNivel
 
-
 class Gerente(Empleado):
-    opcion = 0
     def __init__(self, nombre, altura, edad, nivel, depto):
         Empleado.__init__(self, nombre, altura, edad, nivel)
         self.__depto = depto
